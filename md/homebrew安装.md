@@ -64,6 +64,18 @@ $ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 ```
 $ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 ```
+### 替换homebrew-cask:
+```
+$ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-cask"
+```
+* 中国科大:
+```
+$ git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-cask.git
+```
+* 清华大学:
+```
+$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+```
 ### 替换homebrew-bottles:
 
 * 中国科大:
@@ -79,6 +91,7 @@ $ source ~/.bash_profile
 ### 应用生效:
 ```
 $ brew update
+$ brew update --verbose # 可以查看更新进度
 ```
 完成更新源后，我们可以使用如下命令：
 ```
