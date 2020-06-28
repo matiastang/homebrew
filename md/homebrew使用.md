@@ -81,5 +81,14 @@ $ sudo vi /etc/hosts
 ```
 重新访问 `https://raw.githubusercontent.com/`，发现可以访问了。
 再`brew install nshipster/formulae/gyb`就可以成功了。
-
+```
+brew install nshipster/formulae/gyb
+==> Installing gyb from nshipster/formulae
+==> Downloading https://raw.githubusercontent.com/apple/swift/dab60f04ca98c573378a5e78ed85d5a27a7ca2e0/utils
+######################################################################## 100.0%
+==> Downloading https://raw.githubusercontent.com/apple/swift/17e5594bec7cebe980857e4fe3e05837708f9f62/utils
+######################################################################## 100.0%
+==> chmod +x /usr/local/Cellar/gyb/2019-01-18/bin/gyb
+🍺  /usr/local/Cellar/gyb/2019-01-18: 4 files, 39.1KB, built in 5 seconds
+```
 [解决 GitHub 的 raw.githubusercontent.com 无法访问的问题]()
