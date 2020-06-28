@@ -1,12 +1,21 @@
 # Homebrew安装
 
 [Homebrew官网](https://brew.sh/index_zh-cn)
+[Homebrew使用](https://github.com/matiastang/homebrew/blob/master/md/homebrew%E4%BD%BF%E7%94%A8.md)
 
 ## 简介
 
 `Homebrew` 是使用 `Mac OS` 的包管理工具，`Homebrew` 可以安装 `Apple` 没有预装但非常有用的软件包。`Homebrew` 会将软件包安装到独立目录，并将其文件软链接至 `/usr/local`。
 
 ## 安装
+
+开始安装前需要安装 macOS 命令行工具：
+
+```
+$ xcode-select —install
+```
+
+或者，在https://developer.apple.com/download/more/下载安装。
 
 * 科学上网
 

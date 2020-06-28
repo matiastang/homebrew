@@ -50,4 +50,4 @@
 执行如下命令：
 > $ brew update-reset
 
-[stack overflow](https://stackoverflow.com/questions/54888582/ruby-cannot-load-such-file-active-support-core-ext-object-blank)
+[stack overflow 问题](https://stackoverflow.com/questions/54888582/ruby-cannot-load-such-file-active-support-core-ext-object-blank)
