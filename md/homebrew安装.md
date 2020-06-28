@@ -1,6 +1,7 @@
 # Homebrew安装
 
 [Homebrew官网](https://brew.sh/index_zh-cn)
+
 [Homebrew使用](https://github.com/matiastang/homebrew/blob/master/md/homebrew%E4%BD%BF%E7%94%A8.md)
 
 ## 简介
@@ -15,60 +16,74 @@
 $ xcode-select —install
 ```
 
-或者，在https://developer.apple.com/download/more/下载安装。
+或者，在[下载安装](https://developer.apple.com/download/more/)。
 
 * 科学上网
 
 使用命令行安装Homebrew：
-
-> $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
 * 非科学上网
 
 1. 使用上述命令安装时会报错：
-
-> curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused
-
+```
+$ curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused
+```
 2. 下载`homebrew.rb`文件到本地
 
 3. 进入保存`homebrew.rb`的文件夹执行如下命令：
-
-> ruby homebrew.rb
-
+```
+$ ruby homebrew.rb
+```
 ## 更换`Homebrew`源
 
 默认官方的更新源都是存放在**GitHub**上的，这也是中国大陆用户访问缓慢的原因，一般来说我们会更倾向选择国内提供的更新源，在此推荐中国科大以及清华大学提供的更新源。
 
 ### 替换brew.git:
-
-> $ cd "$(brew --repo)"
+```
+$ cd "$(brew --repo)"
+```
 * 中国科大:
-> $ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+```
+$ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+```
 * 清华大学:
-> $ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-
+```
+$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+```
 ### 替换homebrew-core.git:
-
-> $ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+```
+$ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+```
 * 中国科大:
-> $ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+```
+$ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+```
 * 清华大学:
-> $ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-
+```
+$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+```
 ### 替换homebrew-bottles:
 
 * 中国科大:
-> $ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
-> $ source ~/.bash_profile
+```
+$ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+$ source ~/.bash_profile
+```
 * 清华大学:
-> $ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
-> $ source ~/.bash_profile
-
+```
+$ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
+$ source ~/.bash_profile
+```
 ### 应用生效:
-> $ brew update
-
+```
+$ brew update
+```
 完成更新源后，我们可以使用如下命令：
-> $ brew upgrade
+```
+$ brew upgrade
+```
 将现有的软件进行更新至最新版本，速度上会比从github上快很多。
 
 ## 重置更新源
@@ -76,31 +91,36 @@ $ xcode-select —install
 某些时候也有换回官方源的需求
 
 ### 重置brew.git:
-
-> $ cd "$(brew --repo)"
-> $ git remote set-url origin https://github.com/Homebrew/brew.git
-
+```
+$ cd "$(brew --repo)"
+$ git remote set-url origin https://github.com/Homebrew/brew.git
+```
 ### 重置homebrew-core.git:
-
-> $ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-> $ git remote set-url origin https://github.com/Homebrew/homebrew-core.git
-
+```
+$ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+$ git remote set-url origin https://github.com/Homebrew/homebrew-core.git
+```
 ## 诊断Homebrew
 
 如果`Homebrew`有点儿什么问题，可以如下尝试解决
 
 ### 诊断Homebrew的问题:
-> $ brew doctor
-
+```
+$ brew doctor
+```
 ### 重置brew.git设置:
-> $ cd "$(brew --repo)"
-> $ git fetch
-> $ git reset --hard origin/master
-
+```
+$ cd "$(brew --repo)"
+$ git fetch
+$ git reset --hard origin/master
+```
 ### homebrew-core.git同理:
-> $ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-> $ git fetch
-> $ git reset --hard origin/master
-
+```
+$ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+$ git fetch
+$ git reset --hard origin/master
+```
 ### 应用生效:
-> $ brew update
+```
+$ brew update
+```
